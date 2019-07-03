@@ -16,3 +16,13 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
+
+body {
+  background: image_url('dust_scratches.png');
+  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+}
+
+.navbar {
+  background-color: rgba(211, 211, 211, 0.466);
+  box-shadow: 2px 2px 1.5px rgba(211, 211, 211, 0.466);
+}
