@@ -18,19 +18,49 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background: image_url('dust_scratches.png');
+  background: image_url('dust_scratches.png') fixed;
   font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 }
 
 .navbar {
-  background-color: rgba(211, 211, 211, 0.466);
-  box-shadow: 2px 2px 1.5px rgba(211, 211, 211, 0.466);
+  background-color: rgb(235, 235, 235);
+  box-shadow: 0px 2px 6px rgb(196, 196, 196);
+  margin-bottom: 25px;
 }
 
 .navbar-light .navbar-brand {
-  color: royalblue;
+  color: cornflowerblue;
   font-family: "Avenir Next", Avenir, sans-serif;
   font-weight: 600;
   letter-spacing: -2px;
   font-size: 26px;
+}
+
+.small-caption {
+  font-style: italic;
+  font-weight: light;
+  color: darkgray;
+  font-size: .7em;
+}
+
+.page-item .page-link {
+  color: cornflowerblue;
+}
+
+.active {
+  color: white;
+}
+
+.page-item.active .page-link {
+  background-color: cornflowerblue;
+  border-color: cornflowerblue;
+}
+
+.page-item.active .page-link:hover {
+  background-color: cornflowerblue;
+  border-color: cornflowerblue;
+}
+
+.page-item .page-link:hover {
+  background-color: rgba(204, 204, 204, 0);
 }
