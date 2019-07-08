@@ -51,15 +51,16 @@ body {
   color: white;
 }
 
-.page-item.active .page-link {
-  background-color: cornflowerblue;
-  border-color: cornflowerblue;
-}
-
+.page-item.active .page-link,
 .page-item.active .page-link:hover {
   background-color: cornflowerblue;
   border-color: cornflowerblue;
 }
+
+// .page-item.active .page-link:hover {
+//   background-color: cornflowerblue;
+//   border-color: cornflowerblue;
+// }
 
 .page-item .page-link:hover {
   background-color: rgba(204, 204, 204, 0);
