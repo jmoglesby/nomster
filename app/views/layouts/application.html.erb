@@ -12,7 +12,7 @@
   <body>
     <nav class="navbar navbar-toggleable-sm sticky-top navbar-light light-gray"> 
       <div>
-        <a class="navbar-brand" href="#">Nomster</a>
+        <%= link_to 'Nomster', root_path, class: 'navbar-brand' %>
 
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#toggleElement" aria-controls="toggleElement" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -21,7 +21,10 @@
 
       <div class="collapse navbar-collapse" id="toggleElement">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="#">Link</a>
+          <%= link_to new_place_path, class:'nav-item nav-link' do %>
+            <i class="fa fa-plus-circle"></i>
+            Add Place
+          <% end %>
         </div>  
       </div>
     </nav>
