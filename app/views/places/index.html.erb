@@ -4,6 +4,12 @@
     <h3><%= place.name %></h3>
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
+
+    <% if place.user.present? %>
+      <div class="d-flex justify-content-end">
+        <small class="badge user-email-tag"><%= place.user.email %></small>
+      </div>
+    <% end %>
   </div>
 <% end %>
 <div class="d-flex justify-content-center">
