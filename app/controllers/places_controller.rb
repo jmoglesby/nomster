@@ -41,8 +41,12 @@ class PlacesController < ApplicationController
 
   def destroy
     @place = Place.find(params[:id])
+    
+    if current_user != @place.user
+      return render plain: 'Not Allowed', status: :forbidden
+    end
+    
     @place.destroy
-
     flash[:notice] = 'Place was successfully deleted.'
     redirect_to root_path
   end
