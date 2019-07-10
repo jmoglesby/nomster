@@ -42,10 +42,10 @@
     </nav>
 
     <% if notice.present? %>
-      <p class="alert alert-info"><%= notice %></p>
+      <p class="alert alert-info col-10 offset-1"><%= notice %></p>
     <% end %>
     <% if alert.present? %>
-      <p class="alert alert-danger"><%= alert %></p>
+      <p class="alert alert-danger col-10 offset-1"><%= alert %></p>
     <% end %>
 
     <%= yield %>
