@@ -15,7 +15,7 @@ class PlacesController < ApplicationController
 
   def create
     current_user.places.create(place_params)
-    
+
     redirect_to root_path
   end
 
@@ -25,9 +25,17 @@ class PlacesController < ApplicationController
 
   def update
     @place = Place.find(params[:id])
-    @place.update(place_params)
+    @place.update_attributes(place_params)
 
     redirect_to place_path(@place)
+  end
+
+  def destroy
+    @place = Place.find(params[:id])
+    @place.destroy
+
+    flash[:notice] = 'Place was successfully deleted.'
+    redirect_to root_path
   end
 
   private #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
