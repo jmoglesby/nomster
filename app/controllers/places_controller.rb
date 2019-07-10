@@ -15,7 +15,19 @@ class PlacesController < ApplicationController
 
   def create
     current_user.places.create(place_params)
+    
     redirect_to root_path
+  end
+
+  def edit
+    @place = Place.find(params[:id])
+  end
+
+  def update
+    @place = Place.find(params[:id])
+    @place.update(place_params)
+
+    redirect_to place_path(@place)
   end
 
   private #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
