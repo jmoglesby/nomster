@@ -4,5 +4,6 @@ class Place < ApplicationRecord
   # associations
   belongs_to :user
   # validations
-  validates :name, presence: true
+  validates :name, presence: true, length: { minimum: 4 }
+  validates :address, :description, presence: true
 end
