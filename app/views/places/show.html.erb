@@ -24,12 +24,12 @@
       }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApXlN1PQR7xwlhoFpAUEQuJTnfJXMhY2A&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['MAPS_API_KEY'] %>&callback=initMap">
     </script>
   <% end %>
 
   <br />
-  
+
   <% if current_user && current_user == @place.user %>
     <div class="d-flex justify-content-end">
       <%= link_to 'Edit', edit_place_path(@place), class: "btn btn-primary mx-1" %>
