@@ -3,6 +3,7 @@ class Place < ApplicationRecord
   paginates_per 5
   # associations
   belongs_to :user
+  has_many :comments
   # geocoding
   geocoded_by :address
   after_validation :geocode
