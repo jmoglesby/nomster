@@ -4,6 +4,7 @@ class Place < ApplicationRecord
   # associations
   belongs_to :user
   has_many :comments
+  has_many :photos
   # geocoding
   geocoded_by :address
   after_validation :geocode
