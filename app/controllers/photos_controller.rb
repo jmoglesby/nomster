@@ -3,7 +3,11 @@ class PhotosController < ApplicationController
 
   def create
     @place = Place.find(params[:place_id])
-    @place.photos.create(photos_params.merge(user: current_user))
+    new_photo = @place.photos.create(photos_params.merge(user: current_user))
+
+    unless new_photo.id
+      flash[:alert] = "Photo too large or not the right file type."
+    end
 
     redirect_to place_path(@place)
   end

@@ -1,3 +1,4 @@
+<!-- Place Display -->
 <div class="booyah-box col-10 offset-1">
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
@@ -69,10 +70,11 @@
   </div>
 </div>
 
+<!-- Photos Display -->
 <div class="col-10 offset-1 row">
   <% @place.photos.each do |photo| %>
     <div class="booyah-box col-3 mx-1">
-      <%= image_tag photo.uploaded_photo.url %>
+      <%= image_tag photo.uploaded_photo.url, class:"img-fluid" %>
       <%= photo.caption %>
     </div>
   <% end %>
@@ -102,6 +104,7 @@
   </div>
 </div>
 
+<!-- Comments Title -->
 <div class="col-10 offset-1">
   <h1 class="float-left">Comments</h1>
   <!-- Comment Modal Button -->
@@ -112,6 +115,7 @@
 
 <div class="clear"></div>
 
+<!-- Comments Display -->
 <div class="row">
   <% @place.comments.each do |comment| %>
     <div class="col-12 col-sm-6">
