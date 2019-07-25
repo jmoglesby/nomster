@@ -1,11 +1,13 @@
 <div class="booyah-box col-10 offset-1">
-  <h3><%= @user.email %></h3>
-  <h4>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h4>
-  <p>5 Star Ratings Given: <%= @user.comments.where(rating: '5_stars').count %>
+  <%= image_tag 'user.png', class: "user-avatar float-left" %>
+  <h3 class="mb-2"><%= @user.email %></h3>
+  <h4 class="mb-2">Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h4>
+  <span><i>Total Comments: </i><%= @user.comments.count %></span>
+  <br/>
+  <span><i>5 Star Ratings Given: </i><%= @user.comments.where(rating: '5_stars').count %></span>
 </div>
 
 <div class="container">
-  <p><i>Total Comments: </i><%= @user.comments.count %></p>
   <% @user.comments.each do |comment| %>
     <div>
       <blockquote>
