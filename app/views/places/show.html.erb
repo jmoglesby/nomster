@@ -1,6 +1,11 @@
 <!-- Place Display -->
 <div class="booyah-box col-10 offset-1">
-  <h1><%= @place.name %></h1>
+  <div class="mb-0">
+    <% if @place.user.present? %>
+      <small class="badge user-email-tag float-right"><%= @place.user.email %></small>
+    <% end %>
+    <h1><%= @place.name %></h1>
+  </div>
   <i><%= @place.address %></i>
   <br /><br />
   <p><%= @place.description %></p>

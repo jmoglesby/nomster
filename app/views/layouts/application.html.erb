@@ -20,11 +20,13 @@
       </div>
 
       <div class="collapse navbar-collapse" id="toggleElement">
-        <div class="navbar-nav">
+        <div class="navbar-nav mr-auto">
           <%= link_to new_place_path, class:'nav-item nav-link' do %>
             <i class="fa fa-plus-circle"></i>
             Add Place
           <% end %>
+        </div>
+        <div class="navbar-nav ml-auto">
           <% if user_signed_in? %>
             <%= link_to user_path(current_user), class: 'nav-item nav-link' do %>
               My Profile

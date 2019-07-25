@@ -38,10 +38,10 @@
 <% @places.each do |place| %>
   <div class="booyah-box col-10 offset-1">
     <div class="mb-0">
-      <%= link_to place.name, place, class: "h3" %>
       <% if place.user.present? %>
           <small class="badge user-email-tag float-right"><%= place.user.email %></small>
       <% end %>
+      <%= link_to place.name, place, class: "h3" %>
     </div>
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
