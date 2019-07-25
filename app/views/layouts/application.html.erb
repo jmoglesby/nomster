@@ -45,12 +45,14 @@
     </nav>
 
     <% if notice.present? %>
-      <p class="alert alert-info col-10 offset-1"><%= notice %></p>
+      <p class="alert alert-info col-10 offset-1 my-4"><%= notice %></p>
     <% end %>
     <% if alert.present? %>
-      <p class="alert alert-danger col-10 offset-1"><%= alert %></p>
+      <p class="alert alert-danger col-10 offset-1 my-4"><%= alert %></p>
     <% end %>
 
     <%= yield %>
+
+    <div class="footer-space"></div>
   </body>
 </html>
