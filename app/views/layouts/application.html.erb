@@ -26,6 +26,9 @@
             Add Place
           <% end %>
           <% if user_signed_in? %>
+            <%= link_to user_path(current_user), class: 'nav-item nav-link' do %>
+              My Profile
+            <% end %>
             <%= link_to destroy_user_session_path, method: :delete, class: 'nav-item nav-link' do %>
               <i class="fa fa-sign-out"></i>
               Log Out
