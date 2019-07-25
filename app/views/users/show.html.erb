@@ -1,22 +1,26 @@
 <div class="booyah-box col-10 offset-1">
-  <%= image_tag 'user.png', class: "user-avatar float-left" %>
-  <h3 class="mb-2"><%= @user.email %></h3>
-  <h4 class="mb-2">Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h4>
+  <%= image_tag 'user.png', class: "float-left img-fluid" %>
+  <h3 class="mb-1"><%= @user.email %></h3>
+  <h6><span class="badge badge-secondary mb-2 cblue">Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></span></h6>
   <span><i>Total Comments: </i><%= @user.comments.count %></span>
   <br/>
   <span><i>5 Star Ratings Given: </i><%= @user.comments.where(rating: '5_stars').count %></span>
 </div>
 
 <div class="container">
+  <h2>My Comments:</h2>
   <% @user.comments.each do |comment| %>
-    <div>
-      <blockquote>
-        <% if comment.humanized_rating.present? %>
-          <b><%= comment.humanized_rating %></b> -
-        <% end %>
-          <%= comment.message %>
-        <small><%= comment.user.email %></small>
-      </blockquote>
+    <div class="comment-link">
+      <%= link_to place_path(comment.place) do %>
+        <blockquote>
+          <% if comment.humanized_rating.present? %>
+            <b><%= comment.humanized_rating %></b> -
+          <% end %>
+            <%= comment.message %>
+          <br/>
+          <small class="font-weight-light text-muted"><%= comment.place.name %></small>
+        </blockquote>
+      <% end %>
     </div>
   <% end %>
 </div>

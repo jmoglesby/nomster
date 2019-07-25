@@ -140,3 +140,16 @@ blockquote p {
   position: absolute;
   left: 0;
 }
+
+.cblue {
+  background-color: cornflowerblue;
+}
+
+.comment-link > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.comment-link > a:hover {
+  color: cornflowerblue;
+}

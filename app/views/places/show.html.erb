@@ -124,7 +124,8 @@
           <b><%= comment.humanized_rating %></b> -
         <% end %>
           <%= comment.message %>
-        <small><%= comment.user.email %></small>
+          <br/>
+        <small class="text-muted font-weight-light"><%= comment.user.email %></small>
       </blockquote>
     </div>
   <% end %>
