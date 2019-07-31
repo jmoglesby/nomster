@@ -1,6 +1,6 @@
 <div class="booyah-box col-10 offset-1">
   <%= image_tag 'user.png', class: "float-left img-fluid" %>
-  <h3 class="mb-1"><%= @user.email %></h3>
+  <h3 class="mb-1 text-break"><%= @user.email %></h3>
   <h6><span class="badge badge-secondary mb-2 cblue">Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></span></h6>
   <span><i>Total Comments: </i><%= @user.comments.count %></span>
   <br/>
